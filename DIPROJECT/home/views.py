@@ -37,7 +37,7 @@ def submitcontact(request):
 
 def disease(request):
     allInfos = Info.objects.all()
-    context = {'allInfos': allInfos}
+    context = {'allInfos': reversed(allInfos)}
     return render(request,'disease.html',context)
 
 def search(request):
